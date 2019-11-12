@@ -6,6 +6,7 @@ vault_zip=vault_"$vault_ver"_darwin_amd64.zip
 me="$USER"
 
 sudo mkdir -p -m 755 /usr/local/bin
+sudo chown $me:wheel /usr/local/bin
 cd /usr/local/bin 
 curl -L0 https://releases.hashicorp.com/vault/$vault_ver/$vault_zip --output $vault_zip
 unzip -o $vault_zip
